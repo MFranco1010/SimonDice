@@ -43,7 +43,7 @@ body{
 
 .info {
     display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     background-color: #0E0E0E;
     height: fit-content;
     justify-self: center;
@@ -52,25 +52,35 @@ body{
     grid-column: 1;
     font-size: larger;
     border-radius: 10px;
-    height: 230px;
-    width: 350px;
+    height: 300px;
+    width: 450px;
 }
 
 .welcome {
     width: fit-content;
     grid-row: 1;
+    font-size: x-large;
+    justify-self: center;
+    align-self: center;
 }
 
 .input{
     grid-row: 2;
+    height: 25px;
+    width: 200px;
+    justify-self: center;
+    align-self: center;
 }
 
 .inputbtn{
-    grid-row: 2;
+    grid-row: 3;
+    height: 25px;
+    width: 30px;
+    justify-self: center;
 }
 
 .points{
-    grid-row: 3;
+    grid-row: 4;
     align-self: center;
     justify-self: center;
     background: linear-gradient(#FF00FF, #B300B2);

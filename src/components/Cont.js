@@ -3,23 +3,29 @@ import { useState } from 'react'
 
 export const Cont = () => {
   const [points, setPoints] = useState(0)
-  const [jug, setJugador] = useState("ejemplo")
+  const [jug, setJug] = useState("")
+  const [NOMBRE, setNOMBRE] = useState("")
 
   const plus = () => {
     setPoints(points + 1);
   };
 
+  const juga = (a) => {
+    setJug(a.target.value);
+  };  
+
   const name = (a) => {
-    setJugador(a);
+    a.preventDefault();
+    setNOMBRE(jug);
   };
   return (
     <div className='cont'>
-        <div className='info'>
-          <p className='welcome'>Bienvenido {jug} </p>
-          <input className='input' placeholder='Ingresa tu nombre' onSubmit={name} />
+        <form onSubmit={name} className='info'>
+          <p className='welcome'>Bienvenido {NOMBRE} </p>
+          <input required className='input' maxLength={18} onChange={juga} placeholder='Ingresa tu nombre'/>
           <button className='inputbtn' type='submit'>👍</button>
           <p className='points'>Puntuacion: { points } </p>
-          </div>
+        </form>
         <div className='btns'>
             <button className='red' onClick={plus} ></button>
             <button className='yel'></button>
