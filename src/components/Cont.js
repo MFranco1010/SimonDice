@@ -32,6 +32,7 @@ export const Cont = () => {
             <button className='gre'></button>
             <button className='pin'></button>
         </div>
+        <button className='jgr'> JUGAR </button>
     </div>
   )
 }

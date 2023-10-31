@@ -4,7 +4,6 @@ body{
     background-color: #141414;
     color: #FFE5FF;
     font-family: 'Poppins', sans-serif;
-
 }
 
 .nav{
@@ -35,7 +34,7 @@ body{
 .cont{
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -70,6 +69,9 @@ body{
     width: 200px;
     justify-self: center;
     align-self: center;
+    border-radius: 5px;
+    background-color: #00FFFF;
+    border-color: #00FFFF;
 }
 
 .inputbtn{
@@ -77,6 +79,9 @@ body{
     height: 25px;
     width: 30px;
     justify-self: center;
+    border-radius: 5px;
+    background-color: #00FFFF;
+    border-color: #00FFFF;
 }
 
 .points{
@@ -91,6 +96,17 @@ body{
     padding-right: 50px;
 }
 
+.jgr{
+    grid-row: 1;
+    grid-column: 2;
+    align-self: center;
+    justify-self: center;
+    background: linear-gradient(#FF00FF, #B300B2);
+    border-color: #FF00FF;
+    border-radius: 10px;
+    padding: 15px;
+}
+
 .btns {
     grid-column: 2;
     grid-row: 1;
@@ -99,12 +115,11 @@ body{
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    position: absolute;
 }
 
 .red{
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     border-top-left-radius: 100%;
     border-bottom-right-radius: 0%;
     border-color: #00FFFF;
@@ -128,8 +143,8 @@ body{
 .pin{
     border-top-left-radius: 0%;
     border-bottom-right-radius: 100%;
-    border-color: #FF00FF;
-    background-color: #FF00FF;
+    border-color: #FF4081;
+    background-color:#FF4081;
 }
 
 .foot{
