@@ -7,13 +7,6 @@ export const Cont = () => {
   const [position, setPosition] = useState(0);
   const [jug, setJug] = useState("");
 
-    
-
-  if (position == arr.length) {
-    setPosition(0)
-    setPoints(0)
-  }
-
   const plus = (a) => {
     if (a.target.value == arr[position]) {
       setPoints(points + 1);
