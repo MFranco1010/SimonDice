@@ -10,10 +10,28 @@ export const Cont = () => {
   const [arr, setArr] = useState([]);
   
   const arreglo = () => {
-    if (position%10 == 0) {
+    if (position%5 == 0) {
       for (let i = 0; i < 5; i++) {
         array.push(Math.floor(Math.random(1)*4)+1);
+        if (array[i] == 1) {
+          const skye = document.getElementById('skye')
+          skye.classList.toggle("skyeshine")
+        }
+        else if (array[i] == 2) {
+          const green = document.getElementById('green')
+          green.classList.toggle("greenshine")
+        }
+        else if (array[i] == 3) {
+          const red = document.getElementById('red')
+          red.classList.toggle("redshine")
+        }
+        else {
+          const pink = document.getElementById('pink')
+          pink.classList.toggle("pinkshine")
+        }
       }
+      const btnJgr = document.getElementById('btnJgr')
+      btnJgr.classList.toggle("jgrgrey")
     }
     setArr(array);
     console.log("ARREGLO: ",array);
@@ -49,12 +67,12 @@ export const Cont = () => {
           <p className='points'>Puntuacion: { points } </p>
         </form>
         <div className='btns'>
-            <button value={1} className='red' onClick={plus} ></button>
-            <button value={2} className='yel' onClick={plus} ></button>
-            <button value={3} className='gre' onClick={plus} ></button>
-            <button value={4} className='pin' onClick={plus} ></button>
+            <button id='skye' value={1} className='skye' onClick={plus} ></button>
+            <button id='green' value={2} className='green' onClick={plus} ></button>
+            <button id='red' value={3} className='red' onClick={plus} ></button>
+            <button id='pink' value={4} className='pin' onClick={plus} ></button>
         </div>
-        <button className='jgr' onClick={arreglo}><p className='jgrtext'>JUGAR</p></button>
+        <button className='jgr' id='btnJgr' onClick={arreglo}><p className='jgrtext'>JUGAR</p></button>
     </div>
   )
 }
