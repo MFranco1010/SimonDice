@@ -46,6 +46,10 @@ export const Cont = () => {
     }
     else {
       alert("PERDISTE");
+      let content = "";
+      content += jug;
+      content += (" "+points);
+      console.log(content)
       setPosition(0);
       setPoints(0);
     }
@@ -61,7 +65,7 @@ export const Cont = () => {
   return (
     <div className='cont'>
         <form onSubmit={name} className='info'>
-          <p className='welcome'>Bienvenido {jug} Combinacion: {arr}</p>
+          <p className='welcome'>Bienvenido {jug}</p>
           <input required className='input' onChange={nam} maxLength={18} placeholder='Ingresa tu nombre'/>
           <button className='inputbtn' type='submit'>👍</button>
           <p className='points'>Puntuacion: { points } </p>
@@ -73,6 +77,9 @@ export const Cont = () => {
             <button id='pink' value={4} className='pin' onClick={plus} ></button>
         </div>
         <button className='jgr' id='btnJgr' onClick={arreglo}><p className='jgrtext'>JUGAR</p></button>
+            <div class="topbar" id="topbar" >
+                <p></p>
+            </div>
     </div>
   )
 }
