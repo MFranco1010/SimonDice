@@ -210,6 +210,20 @@ body{
 .pink:active{
     box-shadow: 0px 0px 15px 15px #ff4080c4;
 }
+.top {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    background-color: #0E0E0E;
+    height: fit-content;
+    justify-self: center;
+    justify-content: center;
+    align-self: center;
+    grid-column: span 2;
+    font-size: larger;
+    border-radius: 10px;
+    height: 300px;
+    width: 450px;
+}
 .foot{
     border-radius: 10px;
     background-color: #0E0E0E;
